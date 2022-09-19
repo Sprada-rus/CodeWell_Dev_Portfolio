@@ -24,6 +24,10 @@ header{
   padding: 2em 0;
   display: flex;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header .logo-str{
@@ -72,13 +76,69 @@ button{
   background: rgb(251, 232, 80);
   font-family: 'Prata', serif;
   font-size: 18px;
+  transition: background-color ease-in .2s;
 }
 
 button:active{
-  background: rgb(253, 237, 136)!important;
+  background-color: rgb(253, 237, 136)!important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+.content{
+  margin-top: 75px;
+}
+
+.content h1{
+  font-family: 'Prata', serif;
+  font-size: 4rem;
+  line-height: 140%;
+}
+
+.title-description{
+  width: 57%;
+}
+
+.title-description p,
+.cards .card .card-description{
+  font-size: 21px;
+  color: rgb(173, 173, 173);
+}
+
+.logos{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards > div{
+  flex-basis: 45%;
+  flex-wrap: wrap;
+}
+
+.cards .card{
+  background-color: inherit;
+}
+
+.cards .card .card-content{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cards .card .card-title{
+  font-family: 'Prata', serif;
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+a{
+  color: #fff;
+  cursor: pointer;
 }
