@@ -12,12 +12,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(10, 10, 11);
   color: #fff;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 p{
   margin-top: 0;
+}
+
+header, section, footer{
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 header{
@@ -103,7 +106,8 @@ button:focus{
 }
 
 .title-description p,
-.cards .card .card-description{
+.cards .card .card-description,
+.desc-text {
   font-size: 21px;
   color: rgb(173, 173, 173);
 }
@@ -113,12 +117,13 @@ button:focus{
   justify-content: space-between;
 }
 
-.cards{
+.cards, .split-content{
   display: flex;
   justify-content: space-between;
 }
 
-.cards > div{
+.cards > div,
+.split-content > div{
   flex-basis: 45%;
   flex-wrap: wrap;
 }
@@ -132,13 +137,49 @@ button:focus{
   padding-right: 0px;
 }
 
-.cards .card .card-title{
+.cards .card .card-title,
+.title {
   font-family: 'Prata', serif;
-  font-size: 35px;
+  font-size: 40px;
   margin: 20px 0;
 }
 
 a{
   color: #fff;
   cursor: pointer;
+}
+
+.back-gray{
+  width: 100%;
+  max-width: inherit;
+  background-color: rgb(46, 48, 56);
+  background-size: 100%;
+}
+
+.split-content{
+  padding: 60px 0px;
+}
+
+.title{
+  margin-top: 0;
+}
+
+.desc-text{
+  margin: 20px 0;
+}
+
+.flex-basis-50{
+  flex-basis: 50% !important;
+}
+
+footer{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 10%;
 }
