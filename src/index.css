@@ -37,8 +37,18 @@ header .logo-str{
   flex-basis: 30%;
 }
 
-header .nav-bar{
-  flex-basis: 40%;
+.mobile-menu{
+  display: flex;
+  flex-basis: 70%;
+  justify-content: space-between;
+}
+
+.menu-btn{
+  display: none;
+}
+
+header .mobile-menu .nav-bar{
+  flex-basis: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,9 +77,9 @@ header .nav-bar .nav-item:hover{
   cursor: pointer;
 }
 
-header .header-btns{
+header .mobile-menu .header-btns{
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 20%;
   justify-content: right;
 }
 
@@ -182,4 +192,117 @@ footer{
   display: flex;
   justify-content: space-between;
   flex-basis: 10%;
+}
+
+@media (max-width: 650px) {
+    header, section, footer{
+        max-width: 625px;
+        margin: 0 20px;
+    }
+
+    header{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    header .logo-str{
+        flex-basis: 55%;
+    }
+
+    header .mobile-menu .header-btns{
+        flex-basis: 100%;
+        align-self: center;
+        justify-content: center;
+    }
+
+    header .nav-bar .nav-item:not(:last-child){
+        margin: 0;
+    }
+
+    .mobile-menu{
+        display: none;
+        flex-wrap: wrap;
+        position: relative;
+        flex-basis: 100%;
+        transition: height ease-in .3s;
+    }
+
+    .mobile-menu.open{
+        display: flex;
+        height: 35vh;
+    }
+
+    .mobile-menu .nav-bar{
+      flex-wrap: wrap;
+      align-items: center;
+      flex-basis: 100% !important;
+    }
+
+    .mobile-menu .nav-bar .nav-item{
+      flex-basis: 100% !important;
+      text-align: center;
+    }
+
+    .menu-btn{
+      display: block;
+    }
+
+    .content h1{
+    font-family: 'Prata', serif;
+    font-size: 2.5rem;
+    line-height: 140%;
+    }
+
+    .title-description{
+    width: 100%;
+    }
+
+    .logos{
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 25vh;
+    width: 42vh;
+    }
+
+    .logos img:nth-child(n){
+    width: 150px;
+    }
+
+    .cards{
+    flex-wrap: wrap;
+    }
+
+    .cards>div:nth-child(n){
+    flex-basis: 30%;
+    }
+
+    .cards img{
+    width: 90vw;
+    }
+
+    .cards .card .card-title, .title{
+    font-size: 35px;
+    }
+
+    .split-content{
+    flex-wrap: wrap;
+    }
+
+    .split-content > div{
+    flex-basis: 100%;
+    }
+
+    .m-flex-basis-100{
+    flex-basis: 100% !important;
+    }
+
+    .social-icons{
+    flex-basis: 30%;
+    }
+
+    .social-icons img{
+    width: 25px;
+    }
+
 }

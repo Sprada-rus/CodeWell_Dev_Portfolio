@@ -71,7 +71,7 @@ function App() {
             </div>
 
             <section className="split-content">
-                <div className="flex-basis-50">
+                <div className="flex-basis-50 m-flex-basis-100">
                     <p className="title">Interested in working with me?</p>
                     <p className="desc-text">I`m active on all social media platforms listed below, but you can&nbsp;also&nbsp;me an email and I will get back to you within 24-48 hours.</p>
                     <button>Get in touch</button>
