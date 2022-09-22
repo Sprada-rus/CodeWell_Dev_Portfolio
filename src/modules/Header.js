@@ -1,13 +1,21 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import menuImg from '../img/Hamburger Menu.svg'
-import {Menu} from "./components/Menu";
+import Menu from "./components/Menu.js";
 
 export function Header(){
     const [statusMenu, setStatusMenu] = useState(false);
+    const menuRef = useRef(null);
 
-    const menuHandler = () => {
+    function menuHandler (){
+        const elementMenu = menuRef.current;
         setStatusMenu(prevState => !prevState);
-        console.log('Yep you are click!', statusMenu);
+        console.log(elementMenu.getBoundingClientRect())
+
+        if (!statusMenu){
+            elementMenu.classList.add('open')
+        } else {
+            elementMenu.classList.remove('open')
+        }
     }
 
     return <header>
@@ -15,6 +23,6 @@ export function Header(){
             <span>Johnathan Specter</span>
         </div>
         <img src={menuImg} alt="menu" className="menu-btn" onClick={menuHandler}/>
-        <Menu menuOpen={statusMenu}/>
+        <Menu menuOpen={statusMenu} ref={menuRef}/>
     </header>;
 }

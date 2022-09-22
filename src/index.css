@@ -220,15 +220,15 @@ footer{
     }
 
     .mobile-menu{
-        display: none;
         flex-wrap: wrap;
-        position: relative;
         flex-basis: 100%;
-        transition: height ease-in .3s;
+        transition: height ease .5s;
+        height: 0;
+        overflow: hidden;
+        position: relative;
     }
 
     .mobile-menu.open{
-        display: flex;
         height: 35vh;
     }
 
