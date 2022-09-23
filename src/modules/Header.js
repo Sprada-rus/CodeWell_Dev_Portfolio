@@ -1,5 +1,4 @@
 import React, {useRef, useState} from "react";
-import menuImg from '../img/Hamburger Menu.svg'
 import Menu from "./components/Menu.js";
 
 export function Header(){
@@ -22,7 +21,7 @@ export function Header(){
         <div className="logo-str">
             <span>Johnathan Specter</span>
         </div>
-        <img src={menuImg} alt="menu" className="menu-btn" onClick={menuHandler}/>
+        <img src="https://raw.githubusercontent.com/Sprada-rus/CodeWell_Dev_Portfolio/0b7c62079555e0cfd179aa79d392c13a0e93f70f/src/img/Hamburger%20Menu.svg" alt="menu" className="menu-btn" onClick={menuHandler}/>
         <Menu menuOpen={statusMenu} ref={menuRef}/>
     </header>;
 }
